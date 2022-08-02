@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html>
+<title>
+Niel Dmello
+</title>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+body {
+background: linear-gradient(274deg, rgb(4, 0, 70) 0%, rgba(0,0,0,1) 0%, rgb(8, 5, 32) 100%);
+font-family: 'Courier New', monospace;
+
+
+}
+
+
+
+#nd{
+  text-decoration: none;
+  font-weight: 900;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Courier New', monospace;
+  text-transform: none;
+  background: linear-gradient(90deg, #000, #33FB9A, #000);
+  letter-spacing: 1px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 2s linear infinite;
+  position: relative;
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
+
+
+.nav {
+  text-decoration: none;
+  height: 50px;
+  width: 100%;
+  background-color: #09082b;
+  position: relative;
+
+}
+
+.nav > .nav-header {
+  display: inline;  
+
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #33FB9A;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 20px;
+ 
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #33FB9A;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: rgb(28, 21, 70);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+/* photo person */
+
+
+
+
+h1 {
+  font-size: 72px;
+  background: #CFE7fA;
+background: linear-gradient(to right, #CFE7fA 0%, #6393C1 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+h2 {
+
+font-size: 72px;
+background:#33FB9A;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+
+h3 {
+font-family: 'Courier New', monospace;
+font-size: 20px;
+background: #33FB9A;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+h4 {
+font-family: 'Courier New', monospace;
+font-size: 25px;
+background: #33FB9A;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+/*project*/
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: consolas;
+}
+
+.projj
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1d061a
+}
+
+.container
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+
+.container .box
+{
+  position: relative;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 30px;
+  transition: 0.5s;
+}
+
+.container .box::before
+{
+  content:' ';
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 50%;
+  height: 110%;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+}
+
+.container .box::after
+{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 50;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+  filter: blur(30px);
+}
+
+.container .box:hover:before,
+.container .box:hover:after
+{
+  transform: skewX(0deg);
+  left: 20px;
+  width: calc(100% - 90px);
+  
+}
+
+.container .box:nth-child(1):before,
+.container .box:nth-child(1):after
+{
+  background: linear-gradient(315deg, #660494, #000000)
+}
+
+.container .box:nth-child(2):before,
+.container .box:nth-child(2):after
+{
+  background: linear-gradient(315deg, #03a9f4, #000000)
+}
+
+.container .box:nth-child(3):before,
+.container .box:nth-child(3):after
+{
+  background: linear-gradient(315deg, #4dff03, #000000)
+}
+
+.container .box:nth-child(4):before,
+.container .box:nth-child(4):after
+{
+  background: linear-gradient(315deg, #fc1414, #181a19)
+}
+
+.container .box span
+{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.container .box span::before
+{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.1s;  
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08)
+}
+
+.container .box:hover span::before
+{
+  top: -50px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+
+.container .box span::after
+{
+  content:'';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.5s;
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  animation-delay: -1s;
+}
+
+.container .box:hover span:after
+{
+  bottom: -50px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+
+@keyframes animate
+{
+  0%, 100%
+  {
+    transform: translateY(10px);
+  }
+  
+  50%
+  {
+    transform: translate(-10px);
+  }
+}
+
+.container .box .content
+{
+  position: relative;
+  left: 0;
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1;
+  transform: 0.5s;
+  color: #fff;
+}
+
+.container .box:hover .content
+{
+  left: -25px;
+  padding: 60px 40px;
+}
+
+.container .box .content h2
+{
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.container .box .content p
+{
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+}
+
+.container .box .content a
+{
+  display: inline-block;
+  font-size: 1.1em;
+  color: #111;
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.container .box .content a:hover
+{
+  background: #ffcf4d;
+  border: 1px solid rgba(255, 0, 88, 0.4);
+  box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
+}
+
+
+
+
+/*certificate*/
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#body1 {
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background: #232427;
+}
+
+.body1 .container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.body1 .container1 .card {
+  position: relative;
+  min-width: 370px;
+  height: 500px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 30px;
+  transition: 0.5s;
+}
+
+.body1 .container1 .card:nth-child(1) .box .content a {
+  background: #2196f3;
+}
+
+.body1 .container1 .card:nth-child(2) .box .content a {
+  background: #e91e63;
+}
+
+.body1 .container1 .card:nth-child(3) .box .content a {
+  background: #23c186;
+}
+
+.body1 .container1 .card .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #2a2b2f;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.body1 .container1 .card .box:hover {
+  transform: translateY(-50px);
+}
+
+.body1 .container1 .card .box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.body1 .container1 .card .box .content {
+  padding: 20px;
+  text-align: center;
+}
+
+.body1 .container1 .card .box .content h5 {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.body1 .container1 .card .box .content h6 {
+  font-size: 1.8rem;
+  color: #fff;
+  z-index: 1;
+  transition: 0.5s;
+  margin-bottom: 15px;
+}
+
+.body1 .container1 .card .box .content p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.body1 .container1 .card .box .content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+.body1 .container1 .card .box .content a:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background: rgb(8, 235, 140);
+  color: #000;
+}
+
+/* footer */
+
+footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+
+    padding-top: 40px;
+    color: #33FB9A;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 2.1rem;
+    font-weight: 900;
+    /* text-transform: capitalize; */
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #33FB9A;
+}
+/* snew */
+
+
+.social-icons{
+  padding:30px;
+  text-align: center;
+}
+.social-icons a{
+  color:#33FB9A;
+  line-height:30px;
+  font-size:30px;
+  margin: 0 5px;
+  text-decoration:none;
+  
+}
+.social-icons a i{
+  line-height:30px;
+  font-size:50px;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1); 
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1); 
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 200ms ease-in;
+  transform: scale(1);
+}
+.social-icons a:hover i{
+  box-shadow: 0px 0px 100px #0ceb04;
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.5);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.5);   
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.5);
+  transition: all 200ms ease-in;
+  transform: scale(1.5);
+}
+/* sewd */
+
+
+
+
+
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px;
+padding-bottom: 40px;
+    text-align: center;
+}
+.footer-bottom p{
+float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom p a{
+  color:#44bae8;
+  font-size: 16px;
+  text-decoration: none;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+.footer-menu{
+  float: right;
+
+}
+.footer-menu ul{
+  display: flex;
+}
+.footer-menu ul li{
+padding-right: 10px;
+display: block;
+}
+.footer-menu ul li a{
+  color: #33FB9A;
+  text-decoration: none;
+}
+.footer-menu ul li a:hover{
+  color: #27bcda;
+}
+
+@media (max-width:500px) {
+.footer-menu ul{
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+}
+
+/* progress */
+
+#pobb{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+        .progress-bar-container:not(:last-child) {
+            margin-bottom: 50px;
+            justify-content: center;
+        }
+ 
+        
+        .progress-bar-container h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #eee;
+            letter-spacing: 1px;
+            font-size: 30px;
+        }
+ 
+      
+        .progress-bar {
+            width: 500px;
+            height: 15px;
+            margin-top: 10px;
+            border: 1px solid #565656;
+            border-radius: 15px;
+            box-shadow: 0 0 20px #33FB9A;
+        }
+ 
+        
+        .percentage {
+            display: block;
+            height: 100%;
+            background-color: #33FB9A;
+            border-radius: 13px;
+            animation: progress 1500ms ease-in 1;
+        }
+ 
+        .c {
+            width: 85%;
+        }
+ 
+        .java {
+            width: 30%;
+        }
+ 
+        .python {
+            width: 65%;
+        }
+ 
+        .html {
+            width: 75%;
+        }
+ 
+        .css {
+            width: 65%;
+        }
+ 
+        .javascript {
+            width: 25%;
+        }
+
+        .dbms {
+            width: 30%;
+        }
+ 
+       
+        @keyframes progress {
+            from {
+                width: 0;
+            }
+        }
+    
+
+
+
+
+
+/* education */
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+bodyx {
+  background: var(--background-color);
+  font-family: var(--font);
+  display: flex;
+  justify-content: center;
+} 
+
+.timelineedu {
+  background: var(--primary-color);
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.cardedu {
+  position: relative;
+  max-width: 500px;
+}
+
+.cardedu:nth-child(odd) {
+  padding: 30px 0 30px 30px;
+}
+.cardedu:nth-child(even) {
+  padding: 30px 30px 30px 0;
+}
+
+.cardedu::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  border: solid #33FB9A;
+}
+
+.cardedu:nth-child(odd)::before {
+  left: 0px;
+  top: -4.5px;
+  bottom: -4.5px;
+  border-width: 5px 0 5px 5px;
+  border-radius: 50px 0 0 50px;
+}
+
+.cardedu:nth-child(even)::before {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-width: 5px 5px 5px 0;
+  border-radius: 0 50px 50px 0;
+}
+
+.cardedu:first-child::before {
+  border-top: 0;
+  border-top-left-radius: 0;
+}
+
+.cardedu:last-child:nth-child(odd)::before {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+}
+
+.cardedu:last-child:nth-child(even)::before {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+}
+
+.infoedu {
+  display: flex;
+  flex-direction: column;
+  background: #333;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.titleedu {
+  color: orangered;
+  position: relative;
+}
+
+
+.titleedu::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 999px;
+  border: 3px solid orangered;
+}
+
+.cardedu:nth-child(even) > .info > .title {
+  text-align: right;
+}
+
+.cardedu:nth-child(odd) > .info > .title::before {
+  left: -45px;
+}
+
+.cardedu:nth-child(even) > .info > .title::before {
+  right: -45px;
+}
+
+
+
+/* photograph */
+.boxp{
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    grid-gap: 15px; 
+    margin: 0 auto;
+  }
+  .carda{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    background: rgb(0, 0, 0);
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+  }
+  .carda:before,
+  .carda:after
+  {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: #33FB9A;
+    transition: 0.5s;
+    z-index:-1;
+  }
+  .carda:hover:before{
+  transform: rotate(20deg);
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  }
+  .carda:hover:after{
+  transform: rotate(10deg);
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  }
+  .carda .imgBx{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  transition: 0.5s;
+  z-index: 1;
+  }
+  
+  .carda:hover .imgBx
+  {
+    bottom: 80px;
+  }
+
+  .carda .imgBx img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .carda .details{
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      height: 70px;
+      text-align: center;
+  }
+
+  .carda .details h2{
+   margin: 0;
+   padding: 0;
+   font-weight: 600;
+   font-size: 20px;
+   color: #777;
+  } 
+
+  .carda .details h2 span{
+  font-weight: 500;
+  font-size: 16px;
+  color: #f38695;
+  display: block;
+  margin-top: 5px;
+   } 
+
+
+/* photoclose */
+
+/* div */
+
+
+.borderrow {
+    border-bottom: 8px solid #33FB9A;
+}
+
+.borderheading {
+    
+    background-color: #33FB9A;
+    color: #080808;
+    display: inline-block;
+    font-weight: 900;
+    padding: 7px 30px 7px 15px;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: 'Courier New', monospace;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.buttonxx {
+  text-decoration: none;
+  color: #33FB9A;
+  background:black;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: normal;
+  /* text-transform: uppercase; */
+  transition: all 0.2s ease-in-out;
+}
+
+.glow-button:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
+
+/* div */
+
+
+
+</style>
+</head>
+<body>
+
+<!-- navbar -->
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+          <a id="nd" href="#" >Niel Dmello...</a>
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <div class="nav-links">
+          <a href="#section1" >About</a>
+          <a href="#section2" >Timeline</a>
+          <a href="#section3" >Skills</a>
+          <a href="#section4" >Projects</a>
+          <a href="#section5" >Contact</a>
+        </div>
+      </div>
+   
+        
+<div id="section1">
+      <div class="boxp">
+        <div class="carda">
+          <div class="imgBx">
+            <img src="niel.jpeg" alt="images">
+
+              
+          </div>
+          <div class="details">
+              <h2 style="font-size:30px;font-family:'Courier New', monospace ;">Niel Dmello<br><span style="font-size:20px;font-family:'Courier New', monospace ;">Web Developer</span></h2><br>
+              <a href="Resume.pdf" class="buttonxx glow-button" target="_blank" style="font-size:20px;font-family:'Courier New', monospace ;">Resume</a><br>
+          </div>
+        </div>
+        
+
+   
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <h4 style="text-align:center; font-size:20px;">Hi, my name is</h4>
+    <h2 style="text-align:center; font-size:50px; font-family:'Courier New', monospace ;">Niel Dmello</h2>
+
+    <h3 style="text-align:center; font-size:20px;"> I'm an BE student at Fr. Conceicao Rodrigues College of Engineering in Computer Engineering Department.</h3>
+      <h3 style="text-align:center; font-size:20px;">I enjoy creating things that live on the internet. My interest in web development started back in 2018.
+        I am very passionate about programming and engineering as a whole. I primarily work on the backend and I am very fond of complex systems that require critical thinking skills and logic. Though, I am flexible and have worked in the frontend as well!</h3><br>
+    <h3 style="text-align:center; font-size:20px;">Here are a few technologies I have been working with recently:</h3>
+
+     <h3 style="text-align:center; font-size:20px;">
+      <li style="color:#33FB9A;font-family:'Courier New', monospace ;">Machine Learning</li>
+      <li style="color:#33FB9A;font-family:'Courier New', monospace ;">Cloud Computing</li>
+      <li style="color:#33FB9A;font-family:'Courier New', monospace ;">Cyber Security</li>
+      <li style="color:#33FB9A;font-family:'Courier New', monospace ;">Artificial Intelligence</li>
+      <li style="color:#33FB9A;font-family:'Courier New', monospace ;">NLP</li>
+      <li style="color:#33FB9A;font-family:'Courier New', monospace ;">Blockchain</li>
+
+     </h3>  
+</div>
+
+
+<div id="section2">
+    <br>
+    <div class="borderrow">
+      <div class="borderheading">Timeline</div>
+  </div>
+  <br>
+
+  
+<!-- education -->
+
+ <bodyx>
+  <div class="timelineedu">
+      <div class="outer">
+        <div class="cardedu">
+          <div class="infoedu">
+            <h2 style="font-size:30px;font-family:'Courier New', monospace ;">St. Joseph High School - Virar West, Palghar.</h2>
+            <p style="font-size:20px;font-family:'Courier New', monospace ;">Completed my matriculation(10'th) under SSC Maharashtra state board in year 2017 with 84.20% .</p>
+          </div>
+        </div>
+        <div class="cardedu">
+          <div class="infoedu">
+            <h2 style="font-size:30px;font-family:'Courier New', monospace ;">Vidyavardhini's Bhausaheb Vartak Polytechnic - Vasai West, Palghar.</h2>
+            <p style="font-size:20px;font-family:'Courier New', monospace ;">Completed Computer Engineering diploma of three year's under MSBTE(Maharashtra State Board of Technical Education, Mumbai) in year 2020 with 94.00% .</p>
+          </div>
+        </div>
+        <div class="cardedu">
+          <div class="infoedu">
+            <h2 style="font-size:30px;font-family:'Courier New', monospace ;">(Internship)Social Tangle - Vasai, Palghar.</h2>
+            <p style="font-size:20px;font-family:'Courier New', monospace ;">Completed 1 month of (web designing) Internship at social tangle in year 2019.</p>
+          </div>
+        </div>
+        <div class="cardedu">
+          <div class="infoedu">
+            <h2 style="font-size:30px;font-family:'Courier New', monospace ;">(Current) Fr. Conceicao Rodrigues College of Engineering - Bandra(w), Mumbai.</h2>
+            <p style="font-size:20px;font-family:'Courier New', monospace;">Pursuing my Bachelor's Degree under Mumbai University and my current cgpa is 9.86</p>
+          </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+</bodyx>
+</div>
+<br>
+
+
+<div id="section3">
+<div class="borderrow">
+  <div class="borderheading">Skills</div>
+</div>
+<br>
+
+<!-- progress -->
+
+<a id="pobb">
+
+
+  <div class="skills">
+      <div class="progress-bar-container">
+          <h3>VS Code</h3>
+          <div class="progress-bar">
+              <span class="percentage c"></span>
+          </div>
+      </div>
+
+      <div class="progress-bar-container">
+          <h3>Java</h3>
+          <div class="progress-bar">
+              <span class="percentage java"></span>
+          </div>
+      </div>
+
+      <div class="progress-bar-container">
+          <h3>Python</h3>
+          <div class="progress-bar">
+              <span class="percentage python"></span>
+          </div>
+      </div>
+
+      <div class="progress-bar-container">
+          <h3>HTML</h3>
+          <div class="progress-bar">
+              <span class="percentage html"></span>
+          </div>
+      </div>
+
+      <div class="progress-bar-container">
+          <h3>CSS</h3>
+          <div class="progress-bar">
+              <span class="percentage css"></span>
+          </div>
+      </div>
+
+      <div class="progress-bar-container">
+        <h3>AWS</h3>
+        <div class="progress-bar">
+            <span class="percentage dbms"></span>
+        </div>
+    </div>
+
+      <div class="progress-bar-container">
+          <h3>GitHub</h3>
+          <div class="progress-bar">
+              <span class="percentage javascript"></span>
+          </div>
+      </div>
+  </div>
+</a>
+</div>
+<br>
+<br>
+
+
+<div id="section4">
+<div class="borderrow">
+  <div class="borderheading">Project's</div>
+</div>
+<br> 
+
+ <!-- project -->
+    <projj>
+      <div class="container">
+        <div class="box">
+          <span></span>
+          <div class="content">
+          <h2 style="font-size:30px;font-family:'Courier New', monospace ;">Home Automation</h2>
+          <h3 style="font-size:20px;font-family:'Courier New', monospace ;background-color: #ffffff;">Home Automation is IOT based automation system using raspberry pi that automates home appliances and allows user to control them easily through internet from anywhere over the world.</h3>
+          <a style="font-size:20px;font-family:'Courier New', monospace ;" href="https://youtu.be/HcswL3Sw2gQ" target="_blank">Demo video</a>
+          </div>
+        </div>
+        <div class="box">
+          <span></span>
+          <div class="content">
+          <h2 style="font-size:30px;font-family:'Courier New', monospace ;">Fake News Detection</h2>
+          <h3 style="font-size:20px;font-family:'Courier New', monospace ;background-color: #ffffff;">Fake News Detection is a web application in which users will be able to determine whether the News is fake or true when it is trained with a certain dataset.Uses various Machine Learning (ML) Algorithms.</h3>
+          <a style="font-size:20px;font-family:'Courier New', monospace ;" href="https://github.com/NielDmello/Fake_News_Detection" target="_blank">Read More</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <span></span>
+          <div class="content">
+          <h2 style="font-size:30px;font-family:'Courier New', monospace ;">Login System</h2>
+          <h3 style="font-size:20px;font-family:'Courier New', monospace ;background-color: #ffffff;">Login System using Salt and Pepper is technic that uses various hashing techniques like MD5 and SHA .To secure users passwords in case of SQL injection attack.</h3>
+          <a style="font-size:20px;font-family:'Courier New', monospace ;" href="https://github.com/NielDmello/Login_System_With_Pepper_SHA_MD5" target="_blank">Read More</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <span></span>
+          <div class="content">
+          <h2 style="font-size:30px;font-family:'Courier New', monospace ;">(Current)Sentiment Analysis</h2>
+          <h3 style="font-size:20px;font-family:'Courier New', monospace ;background-color: #ffffff;">Currently I am working on project Sentiment Analysis which detects user emotions.This project will be combination of ML,NLP and Deep Learning.</h3>
+          <!-- <a style="font-size:20px;font-family:'Courier New', monospace ;" href="#">Read More</a> -->
+          </div>
+        </div>
+        </div>
+    
+        
+      </projj>
+
+       <div class="borderrow">
+        <div class="borderheading">Achievement's</div>
+    </div>
+    <br> 
+  </div>
+
+<!-- certiff -->
+
+<div class="body1">
+  <div class="container1">
+      <div class="card">
+        <div class="box">
+          <div class="content">
+            <!-- <h2>SSC</h2> -->
+            <h3 style="font-size:40px;font-family:'Courier New', monospace ;">AWS</h3>
+            <img src="AWSphoto.jpeg" alt="" width="200" height="200">
+            <h3 style="font-size:20px;font-family:'Courier New', monospace ;background-color: #ffff;">AWS Academy Graduate - AWS Academy Cloud Foundations 2022.</h3>
+            <a style="font-size:20px;font-family:'Courier New', monospace ;" href="AWSpdf.pdf" target="_blank">Certificate</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="box">
+          <div class="content">
+            <!-- <h2>DIPLOMA</h2> -->
+            <h3 style="font-size:40px;font-family:'Courier New', monospace ;">HackerRank</h3>
+            <img src="hrnkphoto.jpeg" alt="" width="200" height="200">
+            <h3 style="font-size:20px;font-family:'Courier New', monospace ;background-color: #ffff;">HackerRank Completetion of Python basic 2022.</h3>
+            <a style="font-size:20px;font-family:'Courier New', monospace ;" href="hrnkpdf.pdf" target="_blank">Certificate</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="box">
+          <div class="content">
+            <!-- <h2>DIPLOMA</h2> -->
+            <h3 style="font-size:40px;font-family:'Courier New', monospace ;">Project</h3>
+            <img src="pcomphoto.jpeg" alt="" width="200" height="200">
+            <h3 style="font-size:20px;font-family:'Courier New', monospace ; background-color: #ffff;">Prototype Competition to showcase Innovative Talent in CRCEites
+              on 30th June 2021.</h3>
+            <a style="font-size:20px;font-family:'Courier New', monospace ;" href="pcompdf.pdf" target="_blank">Certificate</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="box">
+          <div class="content">
+            <h3 style="font-size:40px;font-family:'Courier New', monospace ;" >Internship</h3>
+            <img src="internshipphoto.jpeg" alt="" width="200" height="200">
+            <h3 style="font-size:20px;font-family:'Courier New', monospace ; background-color: #ffff;" >Internship Completetion Certificate 2019.</h3>
+            <a style="font-size:20px;font-family:'Courier New', monospace ;" href="Internship.pdf" target="_blank">Certificate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div id="section5">
+<!-- footer -->
+<footer>
+  <div class="footer-content">
+      <h3>Niel Dmello</h3>
+      <div>
+        <h3 class="fa fa-map-marker" aria-hidden="true" style="font-size:30px"> <a style="font-family:'Courier New', monospace ;font-size:20px"> Ish Shraddha, Dontalav, Agashi, Virar(W), 401301, Palghar, Maharashtra.</a></h3><br>
+        <h3 class="fa fa-envelope" aria-hidden="true" style="font-size:30px">  <a style="font-family:'Courier New', monospace ;font-size:20px"> dmelloniel@gmail.com</a></h3><br>
+        <h3 class="fa fa-phone" aria-hidden="true" style="font-size:30px">  <a style="font-family:'Courier New', monospace; font-size:20px">+91 7378537058</a></h3>
+      </div>
+      <div class="social-icons">
+        
+          </a>
+          <a href="https://twitter.com/dmello_niel" title="twitter" target="_blank"> 
+            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com/nieldmello0/" title="instagram" target="_blank">  
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://youtube.com/channel/UCsuT0Nzp0ko2JdLh_xoPZUg" title="youtube" target="_blank">
+            <i class="fa fa-youtube-square" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/niel-dmello-b66847192" title="linkedin" target="_blank">
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          </a>
+          <a href="https://github.com/NielDmello" title="linkedin" target="_blank">
+            <i class="fa fa-github-square" aria-hidden="true"></i>
+          </a>
+        </div>
+  </div>
+  <div class="footer-bottom">
+      <p style="font-family:'Courier New', monospace; font-size:20px">copyright &copy; 2022 <a style="font-size:20px" href="https://www.instagram.com/nieldmello0/" target="_blank">Niel Dmello</a>  </p>
+              <div class="footer-menu">
+                <ul class="f-menu">
+                  <li style="font-family:'Courier New', monospace; font-size:20px"><a href="">Home</a></li>
+                  <li style="font-family:'Courier New', monospace; font-size:20px"><a href="">About</a></li>
+                  <li style="font-family:'Courier New', monospace; font-size:20px"><a href="https://www.instagram.com/nieldmello0/" target="_blank">Contact</a></li>
+                </ul>
+              </div>
+  </div>
+
+</footer>
+</div>
+
+
+</body>
+</html>
